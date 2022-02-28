@@ -1,0 +1,153 @@
+.main-banner {
+    .flex-row {
+        display: flex !important;
+    }
+
+    // Slick Custom
+    .slick-slider {
+        display: flex;
+        align-items: center;
+
+        &:hover .slick-arrow {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .slick-list {
+            flex: 1;
+            margin: 0 40px;
+            padding: 20px 0;
+        }
+
+        .slick-slide { 
+            pointer-events: none;
+    
+            &.slick-active.slick-current {
+                pointer-events: visible;
+                img {
+                    transform: translateY(0);
+                }
+            }
+            img {
+                transform: translateY(80px);
+                transition: transform 0.54s linear;
+            }
+            .txt-box {
+                display: inline-flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 60px;
+                word-break: break-word;
+
+                h3 {
+                    font-size: 30px;
+                    font-weight: 400;
+                    opacity: 0.6;
+                }
+                h2 {
+                    font-size: 42px;
+                    font-weight: 600;
+                }
+                span {
+                    font-weight: 200;
+                    line-height: 1.6;
+                    opacity: 0.4;
+                }
+                button {
+                    align-self: flex-end;
+                    margin-top: 60px;
+                    padding: 8px 16px;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .slick-arrow {
+            width: 30px;
+            height: 60px;
+            position: static;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.34s linear, visibility 0.34s linear;
+
+            &.slick-prev {
+                background: url('../images/arrow_back_white.svg') no-repeat;
+            }
+            &.slick-next {
+                background: url('../images/arrow_forward_white.svg') no-repeat;
+            }
+            &:before {
+                content: none !important;
+            }
+        }
+    }
+}
+
+
+/* 하단 무비 영역 */
+.movies-wrapper {
+    padding: 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    row-gap: 80px;
+
+    .movie-box {
+        display: flex;
+        width: calc(100% / 2 - 30px);
+        background: #101010;
+        background: #222222;
+        box-shadow: 0 0 14px 10px rgb(0 0 0 / 75%);
+
+        .img-box {
+            flex: 0 0 auto;
+            width: 35%;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .txt-box {
+            padding: 0 20px;
+        }
+
+        .genres {
+            padding: 0;
+            list-style: none;
+
+            li {
+                padding: 4px 1px;
+                margin-right: 10px;
+                display: inline-block;
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 10px;
+                    background: rgb(165, 165, 63);
+                    opacity: 0.5;
+                }
+
+                &:nth-child(1):after {
+                    background: hotpink;
+                }
+                &:nth-child(2):after {
+                    background: rgb(166, 69, 223);
+                }
+                &:nth-child(3):after {
+                    background: rgb(46, 255, 220);
+                }
+                &:nth-child(4):after {
+                    background: rgb(148, 255, 105);
+                }
+            }
+        }
+    }
+}
+
