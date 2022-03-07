@@ -34,7 +34,7 @@ function Home() {
     return (
     <div>
         {loading
-        ? <h1>Loading...</h1>
+        ? <div className="w_1400"><h1>Loading...</h1></div>
         : 
         <div>
             <div className="main-banner">

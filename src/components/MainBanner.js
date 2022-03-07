@@ -36,7 +36,6 @@ function MainBanner({ mainMovies }) {
                                               : mainMovie.summary
                                             }
                                         </span>
-                                        <button className="btn-txt">Show More!</button>
                                     </div>
                                 </div>
                             </Link>

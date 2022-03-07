@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "../scss/Detail.scss";
 
 function Detail(){
     const [loading, setLoading] = useState(true);
@@ -21,27 +22,38 @@ function Detail(){
 
     console.log(movie)
     return (
-        <div>
-        {loading
-        ? <div>Loading......:-(</div>
-        : <div>
-            <img src={movie.medium_cover_image} alt={movie.title}/>
-            <h2>{movie.title}</h2>
-            <p>{movie.description_intro}</p>
-            <ul>
-                <li>
-                    장르
+        <div className="detail-wrapper w_1400">
+            {
+            loading
+            ? <div>Loading......:-(</div>
+            : <div className="detail-box">
+                <div className="txt-box">
+                    <h2>{movie.title}</h2>
+                    <p>{movie.description_intro}</p>
                     <ul>
-                        {movie.genres.map((g) => (
-                            <li key={g}>{g}</li>
-                        ))}
+                        <li>
+                            <span className="info_name">Genres</span>
+                            <ul>
+                                {movie.genres.map((g, i) => (
+                                    <li key={g}>{g}
+                                    { i + 1 < movie.genres.length
+                                      ? ","
+                                      : null
+                                    }
+                                    </li>
+                                ))}
+                            </ul>
+                        </li>
+                        <li><span className="info_name">Ratings</span>{movie.rating}</li>
+                        <li><span className="info_name">Year</span>{movie.year}</li>
+                        <li><span className="info_name">Running time</span>{movie.runtime} minutes </li>
                     </ul>
-                </li>
-                <li>평점 : {movie.rating}</li>
-                <li>개봉년도 : {movie.year}</li>
-            </ul>
-        </div>
-        }
+                </div>
+                <div className="img-box">
+                    <img src={movie.large_cover_image} alt={movie.title}/>
+                </div>
+            </div>
+            }
         </div>
     )
 }
