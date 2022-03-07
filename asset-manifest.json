@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-movie-app/static/css/main.60cf1019.css",
+    "main.css": "/react-movie-app/static/css/main.7fd6d840.css",
     "main.js": "/react-movie-app/static/js/main.2ae8225b.js",
     "static/media/slick.svg": "/react-movie-app/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/react-movie-app/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -9,11 +9,11 @@
     "index.html": "/react-movie-app/index.html",
     "static/media/arrow_back_white.svg": "/react-movie-app/static/media/arrow_back_white.f774e3680316b809b7d8.svg",
     "static/media/arrow_forward_white.svg": "/react-movie-app/static/media/arrow_forward_white.d7475f95315870cea9dd.svg",
-    "main.60cf1019.css.map": "/react-movie-app/static/css/main.60cf1019.css.map",
+    "main.7fd6d840.css.map": "/react-movie-app/static/css/main.7fd6d840.css.map",
     "main.2ae8225b.js.map": "/react-movie-app/static/js/main.2ae8225b.js.map"
   },
   "entrypoints": [
-    "static/css/main.60cf1019.css",
+    "static/css/main.7fd6d840.css",
     "static/js/main.2ae8225b.js"
   ]
 }
