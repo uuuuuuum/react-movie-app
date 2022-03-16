@@ -43,6 +43,8 @@
 
                         ul {
                             display: flex;
+                            flex-wrap: wrap;
+                            width: 100%;
                             li {
                                 margin-right: 8px;
                             }
@@ -72,8 +74,10 @@
 
     @media screen and (max-width: 767px) {
         .detail-box {
-            font-size: 16px;
+            flex-direction: column;
             column-gap: 0;
+            font-size: 16px;
+            
             .txt-box {
                 order: 3;
                 margin-top: 20px;
