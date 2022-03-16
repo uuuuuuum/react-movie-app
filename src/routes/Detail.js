@@ -25,29 +25,32 @@ function Detail(){
         <div className="detail-wrapper w_1400">
             {
             loading
-            ? <div>Loading......:-(</div>
+            ? <div className="w_1400"><h1>Loading...</h1></div>
             : <div className="detail-box">
+                <h2>{movie.title}</h2>
                 <div className="txt-box">
-                    <h2>{movie.title}</h2>
                     <p>{movie.description_intro}</p>
-                    <ul>
-                        <li>
-                            <span className="info_name">Genres</span>
-                            <ul>
-                                {movie.genres.map((g, i) => (
-                                    <li key={g}>{g}
-                                    { i + 1 < movie.genres.length
-                                      ? ","
-                                      : null
-                                    }
-                                    </li>
-                                ))}
-                            </ul>
-                        </li>
-                        <li><span className="info_name">Ratings</span>{movie.rating}</li>
-                        <li><span className="info_name">Year</span>{movie.year}</li>
-                        <li><span className="info_name">Running time</span>{movie.runtime} minutes </li>
-                    </ul>
+                    <div>
+                        <h3>Information</h3>
+                        <ul>
+                            <li>
+                                <span className="style-bg-dgray info_name">Genres</span>
+                                <ul className="style-bg-dgray">
+                                    {movie.genres.map((g, i) => (
+                                        <li key={g}>{g}
+                                        { i + 1 < movie.genres.length
+                                        ? ","
+                                        : null
+                                        }
+                                        </li>
+                                    ))}
+                                </ul>
+                            </li>
+                            <li><span className="style-bg-dgray info_name">Ratings</span><span className="style-bg-dgray">{movie.rating}</span></li>
+                            <li><span className="style-bg-dgray info_name">Year</span><span className="style-bg-dgray">{movie.year}</span></li>
+                            <li><span className="style-bg-dgray info_name">Running time</span><span className="style-bg-dgray">{movie.runtime} minutes</span></li>
+                        </ul>
+                    </div>
                 </div>
                 <div className="img-box">
                     <img src={movie.large_cover_image} alt={movie.title}/>

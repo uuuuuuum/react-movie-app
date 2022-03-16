@@ -203,10 +203,14 @@
         background: #222222;
         box-shadow: 0 0 14px 10px rgb(0 0 0 / 75%);
         position: relative;
+        transition: transform 0.14s ease-out;
 
         &:hover {
             h2 {
                 text-decoration: underline;
+            }
+            & {
+                transform: translateY(-15px);
             }
         }
 
@@ -269,7 +273,11 @@
     /* 반응형 */
     @media screen and (max-width: 1247px) {
         column-gap: 30px;
-        row-gap: 60px;
+        row-gap: 40px;
+
+        .movie-box {
+            width: calc(50% - 15px);
+        }
     }
 
     @media screen and (max-width: 1023px) {
@@ -296,11 +304,14 @@
         row-gap: 30px;
 
         .movie-box {
-            width: 100%;    
-        }
-
-        .movie-box {
             padding: 0;
+            width: 100%;    
+
+            &:hover {
+                & {
+                    transform: translateY(0);
+                }
+            }
 
             & > a {
                 flex-direction: row;
